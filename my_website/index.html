@@ -1,24 +1,109 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>TEST HOME PAGE</title>
-  </head>
-  <body>
-    <style>
+<html>
+<head>
+<style>
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
       body {
-        background-color: #4B0082;
+        background-image: url(background1.jpg);
       }
-    </style>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="https://www.youtube.com/">Youtube</a>
-    <a href="aboutme.html">About Me</a>
-    <center><h1 style="font-family:verdana;">TEST PAGE HOME PAGE ( ͡° ͜ʖ ͡°)</h1></center>
+</style>
+<title>Home Page</title>
+</head>
+<body>
+<div class="container">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About Me</a>
+  <a href="portfolio.html">Portfolio</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Links</button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="http://steamcommunity.com/id/treboRoners/" target="_blank">Steam</a>
+      <a href="https://github.com/treborna" target="_blank">Github</a>
+      <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    </div>
+  </div> 
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+    <center><h1 style="font-family:veranda;">Home Page</h1></center>
     <center><h2>Created by Robert Alaan</h2></center>
     <center><video width="400" height="300" autoplay loop>
       <source src="video/homeexplosion.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video></center>
-  </body>
+</body>
 </html>

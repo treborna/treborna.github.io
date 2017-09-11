@@ -4,16 +4,178 @@
 	    <meta charset="utf-8">
 	    <title>About Me</title>
 	    <style>
-	    	body {
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: #787878;
+}
+
+	    header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+     body {
 	    		background-image: url(background1.jpg);
+	  	}
+	article {
+   	 margin-left: 170px;
+   	 border-left: 1px solid gray;
+   	 padding: 1em;
+  	  overflow: hidden;
 	    	}
-	    </style>
+   </style>
 	  </head>
-	  <body>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <h1>Little bit about me..</h1>
-    <p>I am still currently studying how to program using HTML which is used to program websites, it is very interesting and I hope I will better understand HTML and finish my very own website.</p>
-	<img src="images/keyboardsmash.gif" width="300" hieght="300">
+	 <body>
+<div class="container">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About Me</a>
+  <a href="portfolio.html">Portfolio</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Links</button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="http://steamcommunity.com/id/treboRoners/" target="_blank">Steam</a>
+      <a href="https://github.com/treborna" target="_blank">Github</a>
+      <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    </div>
+  </div> 
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+	<header>Little bit about me...</header>
+    <article>
+    <h1>Robert Alaan</h1>
+     <p>I am still currently studying how to program using HTML which is used to program websites, it is very interesting and I hope I will better understand HTML and finish my very own website.</p>
+	 <img src="images/keyboardsmash.gif" width="300" hieght="300">
+	 <p>Information:</p>
+	 <p>-School:<a href="http://www.lawndalehs.org/">Lawndale High School</a></p>
+	 <table>
+  <tr>
+    <th>Class</th>
+    <th>Teacher</th>
+    <th>Period</th>
+  </tr>
+  <tr>
+    <td>U.S Government</td>
+    <td>Korn, Edward</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>CSU Expository RDG & WTG</td>
+    <td>Gabel, Gina</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Digital Photography</td>
+    <td>McArthur, Peter</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>AP Calculus</td>
+    <td>Henderson, Kelly</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>AP Statistics</td>
+    <td>Rodriguez, Roberto</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Computer Science Principles</td>
+    <td>Nakmee, Sasai</td>
+    <td>6</td>
+  </tr>
+</table>
+	</article>
 	  </body>
 	</html>

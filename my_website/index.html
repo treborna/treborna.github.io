@@ -63,13 +63,35 @@
 .show {
     display: block;
 }
-     body {
-        background-image: url(background1.jpg);
-      }
+body {
+    background-image: url("background1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+   table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: #787878;
+}
 </style>
 <title>Home Page</title>
 </head>
 <body>
+<body style="font-family:Arial">
 <div class="container">
   <a href="index.html">Home</a>
   <a href="aboutme.html">About Me</a>
@@ -100,11 +122,59 @@ window.onclick = function(e) {
   }
 }
 </script>
-    <center><h1 style="font-family:veranda;">Home Page</h1></center>
+    <center><h1 style="font-family:Arial;">Home Page</h1></center>
     <center><video width="400" height="300" autoplay loop>
       <source src="video/homeexplosion.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video></center>
-    <center><footer>Loop of a house blowing up..</footer></center>
+    <center><p>Loop of a house blowing up...</p></center>
+    <p><strong>Classes</strong></p>
+     <table>
+  <tr>
+    <th>Class</th>
+    <th>Teacher</th>
+    <th>Period</th>
+  </tr>
+  <tr>
+    <td>U.S Government</td>
+    <td>Korn, Edward</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>CSU Expository RDG & WTG</td>
+    <td>Gabel, Gina</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Digital Photography</td>
+    <td>McArthur, Peter</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>AP Calculus</td>
+    <td>Henderson, Kelly</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>AP Statistics</td>
+    <td>Rodriguez, Roberto</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Computer Science Principles</td>
+    <td>Nakmee, Sasai</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>None</td>
+    <td>None</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>None</td>
+    <td>None</td>
+    <td>8</td>
+  </tr>
+</table>
 </body>
 </html>

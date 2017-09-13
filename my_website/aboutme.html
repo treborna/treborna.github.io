@@ -83,24 +83,14 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #787878;
 }
-
-	    header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
+.parallax {
+    background-image: url("bloodmoon.png");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-     body {
-	    		background-image: url(background2.jpg);
-	  	}
-	article {
-   	 margin-left: 170px;
-   	 border-left: 1px solid gray;
-   	 padding: 1em;
-  	  overflow: hidden;
-	    	}
-	 
    </style>
 	  </head>
 	 <body>
@@ -135,9 +125,8 @@ window.onclick = function(e) {
   }
 }
 </script>
-	<header>Little bit about me...</header>
-    <article>
-    <h1>Robert Alaan</h1>
+<div class="parallax"></div>
+<h1>About me...</h1>
     <p>I am currently studying how to program using HTML which is used to program websites, it is very interesting and I hope I will better understand HTML and finish my very own website.</p>
 	 <img src="images/keyboardsmash.gif" width="300" hieght="300">
 	 <p>Information:</p>
@@ -194,6 +183,8 @@ window.onclick = function(e) {
     <td>8</td>
   </tr>
 </table>
-	</article>
+<div style="height:200px;font-size:18px">
+
+</div>
 	  </body>
 	</html>

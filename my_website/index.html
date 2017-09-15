@@ -153,6 +153,26 @@ div.panel {
   background: #430297;
   color: white;
 }
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
 </style>
 <title>Home Page</title>
 </head>
@@ -188,6 +208,10 @@ window.onclick = function(e) {
   }
 }
 </script>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Hey!</strong> The website is still underdevelopment and some buttons and features might be missing.
+</div>
     <center><h1 style="font-family:Arial;">Home Page</h1></center>
     <center><video width="400" height="300" autoplay loop>
       <source src="video/homeexplosion.mp4" type="video/mp4">

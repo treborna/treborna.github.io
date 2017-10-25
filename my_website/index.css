@@ -110,3 +110,8 @@ body {
 .closebtn:hover {
     color: black;
 }
+.footer {
+   position: fixed;
+   left: 800px;
+   bottom: 0;
+}
